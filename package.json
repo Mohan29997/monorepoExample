@@ -1,0 +1,23 @@
+{
+  "name": "root",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "web": "yarn workspace website start",
+    "ios": "yarn workspace mobile ios",
+    "android": "yarn workspace mobile android"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/**"
+    ],
+    "nohoist": [
+      "**/mobile",
+      "**/mobile/**"
+    ]
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "lerna": "^7.1.1"
+  }
+}
